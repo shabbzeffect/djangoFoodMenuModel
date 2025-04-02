@@ -1,0 +1,13 @@
+<h1>Home Page</h1>
+<h3>Explore our Food Items</h3>
+
+<ul>
+    {% for item in items %}
+        <li>
+            <h4>{{ item.item_name }}</h4>
+            <p>Price: ${{ item.price }}</p>
+            <p>Description: {{ item.desc }}</p>
+            <img src="{{ item.image.url }}" alt="{{ item.item_name }}" />
+        </li>
+    {% endfor %}
+</ul>
